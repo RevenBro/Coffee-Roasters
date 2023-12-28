@@ -11,3 +11,66 @@
 .header__logo-link {
     display: inline-block;
 }
+
+.navbar__list {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__item {
+
+    & + & {
+        margin-left: 33px;
+    }
+}
+
+.navbar__link {
+    color: #83888F;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px; /* 125% */
+    letter-spacing: 0.923px;
+    transition: color 0.5s linear;
+
+    &:hover {
+        color: #000;
+    }
+}
+
+.hamburger-btn {
+    background-color: none;
+    border: none;
+    display: none;
+}
+
+@media only screen and (max-width:1010px) {
+    .site-header {
+        padding: 20px 0 55px;
+    }
+}
+
+@media only screen and (max-width:770px) {
+    .site-header {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .site-header {
+        padding: 32px 0 40px;
+    }
+
+    .header__logo-img {
+        width: 163px;
+        height: 18px;
+    }
+
+    .header__navbar {
+        display: none;
+    }
+
+    .hamburger-btn {
+        display: block;
+    }
+}

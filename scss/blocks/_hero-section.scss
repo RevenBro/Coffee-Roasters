@@ -1,6 +1,6 @@
 .hero__wrapper {
     padding: 117px 0 116px 85px;
-    background-image: url("../../images/hero-bg.jpg");
+    background-image: url("../images/hero-bg.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -52,5 +52,75 @@
     &:hover {
         border-radius: 6px;
         background: #66D2CF;
+    }
+}
+
+@media only screen and (max-width:1010px) {
+    .hero__wrapper {
+        padding: 54px 0 100px 80px;
+        background-image: url("../images/tablet-hero-bg.jpg");
+        background-position: top right;
+        background-size: 100%;
+    }
+
+    .hero__content {
+        width: 40%;
+    }
+
+    .hero__title {
+        @include site-title($font-size: 48px, $line-height: 48px);
+        margin-bottom: 24px;
+    }
+
+    .hero__text {
+        @include site-text();
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width:858px) {
+    .hero__wrapper {
+        padding: 20px 0 60px 50px;
+    }
+
+    .hero__content {
+        width: 55%;
+    }
+}
+
+@media only screen and (max-width:669px) {
+    .hero__wrapper {
+        padding: 100px 24px;
+        background-image: url("../images/mobile-hero-bg.jpg");
+        background-position: top right;
+        background-size: 100%;
+        border-radius: 10px;
+    }
+
+    .hero__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero__title {
+        @include site-title($font-size:40px, $line-height:40px);
+        text-align: center;
+    }
+
+    .hero__text-wrapper {
+        width: 100%;
+    }
+
+    .hero__text {
+        text-align: center;
+        margin-bottom: 39px;
+    }
+}
+
+@media only screen and (max-width:368px) {
+    .hero__wrapper {
+        padding: 20px 15px 40px;
     }
 }

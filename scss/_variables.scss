@@ -1,0 +1,15 @@
+@mixin site-title($title-color: #FEFCF7, $font-weight: 900, $font-size: 72px, $line-height:72px) {
+    color: $title-color;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+    font-style: normal;
+}
+
+@mixin site-text($text-color: #FEFCF7, $font-weight: 400, $font-size: 15px, $line-height: 25px) {
+    color: $text-color;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+    font-style: normal;
+}
