@@ -101,9 +101,27 @@
     }
 }
 
+@media only screen and (max-width:728px) {
+    .collection__content::before {
+        width: 100%;
+        height: 72px;
+        background-image: url("../images/our-collection-bg2-tablet.svg"); 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
 @media only screen and (max-width:481px) {
     .collection-section {
         padding: 205px 0 120px;
+    }
+    
+    .collection__content::before {
+        width: 100%;
+        height: 72px;
+        background-image: url("../images/our-collection-bg-mobile.svg");
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     .collection__card {
