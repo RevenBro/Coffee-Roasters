@@ -1,6 +1,4 @@
-.commit-section {
-    margin-top: 500px;
-}
+
 
 .commit__content {
     display: flex;
@@ -10,4 +8,68 @@
 
 .commit__right {
     width: 540px;
+}
+
+.commit__title {
+    @include site-title($title-color: #333D4B, $font-size: 40px, $line-height: 48px);
+    margin-bottom: 32px;
+    font-family: Fraunces, serif;
+}
+
+.commit__text {
+    @include site-text($text-color: #333D4B, $font-size: 16px, $line-height: 26px, $opacity: 0.8)
+}
+
+@media only screen and (max-width:1055px) {
+    .commit__content {
+        justify-content: center;
+        gap: 69px;
+    }
+    
+    .commit__title {
+        @include site-title($title-color: #333D4B, $font-size: 32px, $line-height: 48px);
+        margin-bottom: 30px;
+    }
+
+    .commit__text {
+        @include site-text($text-color: #333D4B, $font-size: 15px, $line-height: 25px, $opacity: 0.8)
+    }
+}
+
+@media only screen and (max-width:907px) {
+    .commit-section {
+        margin-top: 168px;
+    }
+}
+
+@media only screen and (max-width:839px) {
+    .commit__content {
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width:647px) {
+    .commit__content {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .commit__right {
+        width: 100%;
+        margin-top: 48px;
+    }
+
+    .commit__title {
+        text-align: center;
+    }
+
+    .commit__text {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 329px) {
+    .commit__picture {
+        display: none;
+    }
 }

@@ -6,10 +6,11 @@
     font-style: normal;
 }
 
-@mixin site-text($text-color: #FEFCF7, $font-weight: 400, $font-size: 15px, $line-height: 25px) {
+@mixin site-text($text-color: #FEFCF7, $font-weight: 400, $font-size: 15px, $line-height: 25px, $opacity: 1) {
     color: $text-color;
     font-weight: $font-weight;
     font-size: $font-size;
     line-height: $line-height;
+    opacity: $opacity;
     font-style: normal;
 }

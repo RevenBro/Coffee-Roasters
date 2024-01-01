@@ -1,0 +1,110 @@
+.country__title {
+    margin-bottom: 72px;
+    @include site-title($title-color: #83888F, $font-size: 24px, $line-height: 32px);
+    font-family: Fraunces, serif;
+}
+
+.country__card-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.country__card {
+    width: 285px;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 40px;
+        height: 49px;
+        background-image: url("../images/country-img1.svg");
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: 100%;
+        position: absolute;
+    }
+}
+
+.country__card:nth-child(2)::before {
+    content: "";
+    width: 40px;
+    height: 49px;
+    background-image: url("../images/country-img2.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100%;
+    position: absolute;
+}
+
+.country__card:nth-child(3)::before {
+    content: "";
+    width: 40px;
+    height: 49px;
+    background-image: url("../images/country-img3.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100%;
+    position: absolute;
+}
+
+.card__strong {
+    padding: 85px 0 24px;
+    display: inline-block;
+    color: #333D4B;
+    font-family: Fraunces, serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 36px;
+}
+
+.loca__text {
+    color: #333D4B;
+    font-family: Barlow;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+}
+
+@media only screen and (max-width:888px) {
+    .card__strong {
+        font-size: 24px;
+        line-height: 36px; /* 150% */
+    }
+}
+
+@media only screen and (max-width:666px) {
+    .country__card-wrapper {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .country__card::before {
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .country__card + .country__card {
+        width: 100%;
+        margin-top: 80px;
+    }
+
+    .country__title {
+        text-align: center;
+    }
+
+    .card__strong {
+        display: block;
+        text-align: center;
+        margin-bottom: 22px;
+        font-size: 28px;
+        line-height: 36px; /* 150% */
+    }
+
+    .card__loca {
+        text-align: center;
+    }
+}
